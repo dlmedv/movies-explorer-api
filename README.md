@@ -27,10 +27,10 @@
  - Clebrate & Joi
  - Winston - логирование ошибок & запросов
 
- #Ссылки на проект 
+ # Ссылки на проект 
 
  IP 158.160.53.237
 
- Backend api.movies.exp.nomoredomains.work;
- Frontend (в разработке);
+ Backend https://api.movies.exp.nomoredomains.work/
+ Frontend (в разработке)
 
