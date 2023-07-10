@@ -7,7 +7,7 @@ const router = require('./routes');
 const errorMiddlewares = require('./middlewares/errorMiddlewares');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT = 3000, DB_ADDRESS = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
+const { PORT = 3000, DB_ADDRESS = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 const app = express();
 mongoose.connect(DB_ADDRESS, {});
 
