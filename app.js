@@ -6,11 +6,13 @@ const { errors } = require('celebrate');
 const router = require('./routes');
 const errorMiddlewares = require('./middlewares/errorMiddlewares');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const limiter = require('./middlewares/requestsLimiter');
 
 const { PORT = 3000, DB_ADDRESS = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 const app = express();
 mongoose.connect(DB_ADDRESS, {});
 
+app.use(limiter);
 app.use(helmet());
 app.use(express.json());
 app.use(requestLogger);
